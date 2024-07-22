@@ -4,6 +4,7 @@
 ```
 SWITCH# show enpoint
 SWITCH# show ip route
+SWITCH# show lldp neighbors
 ```
 ```
 APIC# ifconfig
