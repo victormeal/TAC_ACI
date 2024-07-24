@@ -1,25 +1,25 @@
 # Interface and VPC Config
 
-### Configure Interface Profile and Switch Profiles
+## Configure Interface Profile and Switch Profiles
 
-#### Steps:
+### Steps:
 
-##### Phase 1.
+#### Phase 1.
 
 Create Interface Policy
 Create AAEP
 Create VLAN Pool
 
-##### Phase 2.
+#### Phase 2.
 
 Create Interface Policy Group
 Create Physical Domain
 
-##### Phase 3.
+#### Phase 3.
 
 Create Interface Profile (Interface Selector)
 
-##### Phase 4.
+#### Phase 4.
 
 Create Switch Profile
 
