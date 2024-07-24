@@ -7,12 +7,15 @@
 #### Phase 1.
 
 Create Interface Policy
+
 Create AAEP
+
 Create VLAN Pool
 
 #### Phase 2.
 
 Create Interface Policy Group
+
 Create Physical Domain
 
 #### Phase 3.
