@@ -26,6 +26,8 @@ Create Interface Profile (Interface Selector)
 
 Create Switch Profile
 
+### GUI Steps
+
 ```
 Fabric
 	Access Policies
