@@ -84,8 +84,7 @@ Fabric
 			Global
 				Attachable Access Entity Profiles <right click to create new one>
 					Name
-					Domain
-						Physical Domain
+					
 		Pools
 			VLAN <right click to create new one>
 				Name
