@@ -26,6 +26,10 @@ Create Interface Profile (Interface Selector)
 
 Create Switch Profile
 
+#### Phase 5.
+
+EGP > Physical DOmain association and Static Port
+
 ### GUI Steps
 
 ```
@@ -97,4 +101,21 @@ Fabric
 				Name
 				AAEP
 				VLAN Pool
+```
+```
+Tenants
+	Tenant_Name
+		Application Profiles
+			Application_Profile_Name
+				Application EPGs
+					EPG_NAME
+						Domains <right click to add physical domain association>
+							Physical Domain Profile
+						Static Ports <right click to Deploy Static EPG...>
+							Path Type (port, PC, VPC)
+							Node
+							Path
+							Port Encap
+							Deployment Immediacy
+							Mode (trunk, access)
 ```
