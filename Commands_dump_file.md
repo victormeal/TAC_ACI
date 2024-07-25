@@ -2,9 +2,12 @@
 
 ### Miscellaneous
 ```
-SWITCH# show enpoint
 SWITCH# show ip route
 SWITCH# show lldp neighbors
+```
+```
+LEAF# show enpoint
+LEAF# show endpoint ip 10.0.0.1
 ```
 ```
 APIC# ifconfig
