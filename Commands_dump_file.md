@@ -23,7 +23,7 @@ APIC# acidiag fnvread
 APIC# acidiag run lldp tool in eth2-1
 APIC# ifconfig
 APIC# show switch
-APIC#  moquery -d uni/infra/accportprof-Leaf_101_102/hports-e1-20-typ-range
+APIC# moquery -d uni/infra/accportprof-Leaf_101_102/hports-e1-20-typ-range
 ```
 ### Faults, Logging
 ```
