@@ -26,6 +26,10 @@ APIC# show switch
 APIC# moquery -d uni/infra/accportprof-Leaf_101_102/hports-e1-20-typ-range
 APIC# moquery -c fvAEPg -f 'fv.AEPg.name=="App_EPG"'
 ```
+### VPC
+```
+LEAF# show system internal epm vpc
+```
 ### Faults, Logging
 ```
 APIC# show faults last-days 5 history
