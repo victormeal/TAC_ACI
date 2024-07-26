@@ -30,6 +30,9 @@ APIC# moquery -c fvAEPg -f 'fv.AEPg.name=="App_EPG"'
 ```
 LEAF# show system internal epm vpc
 ```
+```
+APIC# moquery -c fabric.ExplicitGEp
+```
 ### Faults, Logging
 ```
 APIC# show faults last-days 5 history
