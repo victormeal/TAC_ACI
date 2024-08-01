@@ -11,6 +11,8 @@ SWITCH# show isis internal mcast routes ftag | egrep -A 9 "FTAG ID:  1"
 LEAF# show enpoint
 LEAF# show endpoint ip 10.0.0.1
 LEAF# show system internal epm endpoint ip 10.0.0.1
+LEAF# show zoning-rule scope <vrf segment>
+LEAF# show zoning-rule | egrep <EPG pcTAG>
 ```
 ```
 SPINE# show coop internal info repo ep | egrep -A 8 -B 42 10.0.0.1
