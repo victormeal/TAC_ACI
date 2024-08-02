@@ -6,6 +6,7 @@ SWITCH# show ip route
 SWITCH# show lldp neighbors
 SWITCH# show isis internal mcast routes gipo | egrep 239.255.255.240 -A 4
 SWITCH# show isis internal mcast routes ftag | egrep -A 9 "FTAG ID:  1"
+SWITHC# iping -V <tenant/vrf> 10.0.1.2
 ```
 ```
 LEAF# show enpoint
