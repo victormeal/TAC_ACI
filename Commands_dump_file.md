@@ -41,6 +41,9 @@ APIC# moquery -c fabric.ExplicitGEp
 ```
 SWITCH# show discoveryissues
 ```
+```
+APIC# acidiag cluster
+```
 ### Faults, Logging
 ```
 APIC# show faults last-days 5 history
