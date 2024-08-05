@@ -50,6 +50,10 @@ APIC# show faults last-days 5 history
 APIC# show faults leaf 101
 APIC# show faults history leaf 101
 ```
+CPU and Porcesses
+```
+APIC# top
+```
 ### NTP
 ```
 SWITCH# show ntp peer-status
