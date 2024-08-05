@@ -22,6 +22,7 @@ SPINE# show coop internal info repo ep | egrep -A 8 -B 42 10.0.0.1
 APIC# ifconfig
 APIC# show firmware upgrade status
 APIC# acidiag avread
+APIC# avread
 APIC# acidiag fnvread
 APIC# acidiag run lldp tool in eth2-1
 APIC# ifconfig
@@ -49,6 +50,11 @@ APIC# acidiag cluster
 APIC# show faults last-days 5 history
 APIC# show faults leaf 101
 APIC# show faults history leaf 101
+```
+APIC Cluster
+```
+APIC# acidiag avread
+APIC# avread
 ```
 CPU and Porcesses
 ```
