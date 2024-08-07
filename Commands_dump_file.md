@@ -39,6 +39,17 @@ LEAF# show system internal epm vpc
 ```
 APIC# moquery -c fabric.ExplicitGEp
 ```
+### Port Counters
+```
+APIC# moquery -c rmonDot3Stats -f 'rmon.Dot3Stats.fCSErrors>="1"' | egrep "dn|fCSErrors"
+APIC# moquery -c rmonEtherStats -f 'rmon.EtherStats.cRCAlignErrors>="1"' | egrep "dn|cRCAlignErrors"
+APIC# moquery -c rmonEgrCounters -f 'rmon.EgrCounters.bufferdroppkts>="1"' | egrep "dn|bufferdroppkts"
+APIC# moquery -c rmonIfOut -f 'rmon.IfOut.errors>="1"' | egrep "dn|errors"
+```
+```
+SWITCH# show int e1/2
+SWITCH# show int e1/2 counter errors
+```
 ### Fabric Discovery
 ```
 SWITCH# show discoveryissues
