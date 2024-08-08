@@ -18,6 +18,7 @@ LEAF# show zoning-rule | egrep <EPG pcTAG>
 ```
 ```
 SPINE# show coop internal info repo ep | egrep -A 8 -B 42 10.0.0.1
+SPINE# show coop internal info repo ep key <BD VNID> <MAC> | egrep 'vnid|mac|id|Real'
 ```
 ```
 APIC# ifconfig
