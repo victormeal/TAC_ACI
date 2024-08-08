@@ -443,7 +443,7 @@ module-1(DBG-elam-insel6)# ereport | egrep "Incoming Interface"
 Incoming Interface                      : 0x62( 0x62 )                            
 module-1(DBG-elam-insel6)# 
 ```
-#### Outgoing Interface
+### Outgoing Interface
 ```
 module-1(DBG-elam-insel6)# ereport | egrep ovector
 ovector                                 : 296( 0x128 )                  
@@ -510,3 +510,4 @@ IfId     Ifname      P Cfg  MbrID As AP  Sl Sp Ss Ovec S | P P P S P Sp Sp C M L
 1a034000 Eth1/53     0 2    17    0  5d  1  14 28 128  1   0 0 0 0 0 0  0  0 0 0   1 5   3   2  2  D-24d  -      200  0      0 0   5    0 0   
 module-1(DBG-elam-insel6)# 
 ```
+
