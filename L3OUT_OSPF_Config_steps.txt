@@ -1,0 +1,93 @@
+# L3OUT (OSPF)
+
+Fabric
+	Access Policies
+		Pools
+			VLAN
+				Create a VLAN pool
+					Name: vmenchac_ExtL3_VLANs
+					Encap Blocks: 2002-2003
+		Physical and External Domains
+			L3 Domains
+				Create Layer 3 Domain
+					name: vmenchac_ExtL3Dom
+					VLAN Pool: vmenchac_ExtL3_VLANs
+		Policies
+			Global
+				Attachable Access Entity Profiles
+					Create AAEP
+						Name: vmenchac_EXTERNAL_SWITCH_AAEP
+						Domain: vmenchac_ExtL3Dom
+		Interface
+			Leaf Interface
+				Policy Group
+					Leaf Access Port
+						Create Leaf Access Port Policy Group
+							Name: vmenchac_ExtL3_IPG
+							Attached Entity Profile: vmenchac_EXTERNAL_SWITCH_AAEP
+							CDP Policy
+							LLDP Policy
+				Profiles
+					L102
+						Create Access Port Selector
+							Name: vmenchac_ExtL3N3K_e1-22
+							Interface IDs: 1/22
+							Interface Policy Group: vmenchac_ExtL3_IPG
+Tenants
+	vmenchac_vrf_01
+		Networking
+			L3Outs
+				Create L3Out
+					Identity:
+						Name: vmenchac_OSPF_L3Out
+						VRF: vmenchac_vrf_01
+						L3 Domain: vmenchac_ExtL3Dom
+						OSPF: check
+						OSPF Area ID: 0
+						OSPF Area Type: Regular area
+					Nodes and Interfaces
+						Use Defualts: No check
+						Node Profile Name: vmenchac_OSPF_L3Out_nodeProfile
+						Interface Types: SVI, Port
+						Nodes ID: Node-102
+						Router ID: 2.2.2.2
+						Loopback Address: empty
+						Interface: eth1/22
+						Interface Profile Name: vmenchac_OSPF_L3Out_interfaceProfile
+						Encap VLAN: 2002
+						MTU: 150
+						IP address: 10.2.0.1/24
+					External EPG
+						Name: vmenchac_N3K_ExtNet
+						Default EPG for all external networks: check 
+System
+	System Settings
+		BGP Route Reflector
+			Name: default
+			Autonomous System Number: 64700
+			Route Reflector Nodes: 
+Fabric
+	Fabric Policies
+		Pods
+			Policy Groups
+				default
+					BGP Route Reflector Policy: default
+Tenants
+	vmenchac_vrf_01
+		Networking
+			Bridge Domains
+				vmenchac_bd_01
+					Subnets
+						10.0.0.254/24
+							Policy
+								Advertised Externally: Check
+					Policy > L3 Configurations
+						Associated L3 Outs: vmenchac_OSPF_L3Out
+			L3Out
+				vmenchac_OSPF_L3Out
+					External EPGs
+						vmenchac_N3K_ExtNet
+							Policy > Contracts > tools icons > add consumed contract
+								Contract: vmenchac_contract_l3out_ospf *pre-configured*
+
+contract has to be added aswell on the intenal EPG as.
