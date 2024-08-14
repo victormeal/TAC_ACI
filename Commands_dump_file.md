@@ -87,14 +87,21 @@ APIC# top
 SWITCH# show ntp peer-status
 APIC# htpstat
 ```
-### OSPF
+### BGP (overlay)
+```
+SWITCH# show bgp sessions vrf overlay-1
+```
+### OSPF L3Out
 ```
 BLF# show ip ospf interface vrf vmenchac_T01:vmenchac_vrf_01
 BLF# show ip ospf neighbors vrf vmenchac_T01:vmenchac_vrf_01
 BLF# show ip route ospf vrf vmenchac_T01:vmenchac_vrf_01
 BLF# show bgp ipv4 unicast vrf vmenchac_T01:vmenchac_vrf_01
 ```
-### BGP (overlay)
+### BGP L3Out
 ```
-SWITCH# show bgp sessions vrf overlay-1
+BLF# show ip bgp summary vrf vmenchac_T01:vmenchac_vrf_01
+BLF# show bgp ipv4 unicast neighbors 3.3.3.3 advertised-routes vrf vmenchac_T01:vmenchac_vrf_01
+BLF# show bgp ipv4 unicast neighbors 3.3.3.3 routes vrf vmenchac_T01:vmenchac_vrf_01
+BLF# show bgp ipv4 unicast neighbors 3.3.3.3 received-routes vrf vmenchac_T01:vmenchac_vrf_01
 ```
