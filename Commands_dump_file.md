@@ -21,7 +21,6 @@ SPINE# show coop internal info repo ep | egrep -A 8 -B 42 10.0.0.1
 SPINE# show coop internal info repo ep key <BD VNID> <MAC> | egrep 'vnid|mac|id|Real'
 ```
 ```
-APIC# show endpoints ip 10.0.0.1
 APIC# ifconfig
 APIC# show firmware upgrade status
 APIC# acidiag avread
@@ -33,6 +32,12 @@ APIC# show switch
 APIC# moquery -d uni/infra/accportprof-Leaf_101_102/hports-e1-20-typ-range
 APIC# moquery -c fvAEPg -f 'fv.AEPg.name=="App_EPG"'
 APIC# fabric 101 show hostname
+```
+### Endpoint learning
+```
+APIC# show epg <>
+APIC# show epg <> detail
+APIC# show endpoints ip 10.0.0.1
 ```
 ### Interfaces
 ```
