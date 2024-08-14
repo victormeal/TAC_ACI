@@ -33,16 +33,10 @@ APIC# moquery -d uni/infra/accportprof-Leaf_101_102/hports-e1-20-typ-range
 APIC# moquery -c fvAEPg -f 'fv.AEPg.name=="App_EPG"'
 APIC# fabric 101 show hostname
 ```
-### VPC
+### Interfaces
 ```
-LEAF# show system internal epm vpc
-```
-### VLANs
-```
-LEAF# show vlan extended
-```
-```
-APIC# moquery -c fabric.ExplicitGEp
+APIC# show run leaf 101 interface eth 1/20
+APIC# show run vpc context leaf 101 102 interface vpc vmenchc_vpc_intpolgroup_01
 ```
 ### Port Counters
 ```
@@ -54,6 +48,17 @@ APIC# moquery -c rmonIfOut -f 'rmon.IfOut.errors>="1"' | egrep "dn|errors"
 ```
 SWITCH# show int e1/2
 SWITCH# show int e1/2 counter errors
+```
+### VLANs
+```
+LEAF# show vlan extended
+```
+```
+APIC# moquery -c fabric.ExplicitGEp
+```
+### VPC
+```
+LEAF# show system internal epm vpc
 ```
 ### Fabric Discovery
 ```
