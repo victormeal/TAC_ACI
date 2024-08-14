@@ -37,6 +37,10 @@ APIC# fabric 101 show hostname
 ```
 LEAF# show system internal epm vpc
 ```
+### VLANs
+```
+LEAF# show vlan extended
+```
 ```
 APIC# moquery -c fabric.ExplicitGEp
 ```
@@ -77,4 +81,10 @@ APIC# top
 ```
 SWITCH# show ntp peer-status
 APIC# htpstat
+```
+### OSPF
+```
+BLF# show ip ospf interface vrf vmenchac_T01:vmenchac_vrf_01
+BLF# show ip ospf neighbors vrf vmenchac_T01:vmenchac_vrf_01
+BLF# show ip route ospf vrf vmenchac_T01:vmenchac_vrf_01
 ```
