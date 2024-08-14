@@ -21,6 +21,7 @@ SPINE# show coop internal info repo ep | egrep -A 8 -B 42 10.0.0.1
 SPINE# show coop internal info repo ep key <BD VNID> <MAC> | egrep 'vnid|mac|id|Real'
 ```
 ```
+APIC# show endpoints ip 10.0.0.1
 APIC# ifconfig
 APIC# show firmware upgrade status
 APIC# acidiag avread
