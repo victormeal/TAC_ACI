@@ -87,4 +87,9 @@ APIC# htpstat
 BLF# show ip ospf interface vrf vmenchac_T01:vmenchac_vrf_01
 BLF# show ip ospf neighbors vrf vmenchac_T01:vmenchac_vrf_01
 BLF# show ip route ospf vrf vmenchac_T01:vmenchac_vrf_01
+BLF# show bgp ipv4 unicast vrf vmenchac_T01:vmenchac_vrf_01
+```
+### BGP (overlay)
+```
+SWITCH# show bgp sessions vrf overlay-1
 ```
