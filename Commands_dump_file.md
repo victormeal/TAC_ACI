@@ -13,8 +13,6 @@ SWITCH# setup-clean-config.sh
 LEAF# show enpoint
 LEAF# show endpoint ip 10.0.0.1
 LEAF# show system internal epm endpoint ip 10.0.0.1
-LEAF# show zoning-rule scope <vrf segment>
-LEAF# show zoning-rule | egrep <EPG pcTAG>
 ```
 ```
 SPINE# show coop internal info repo ep | egrep -A 8 -B 42 10.0.0.1
@@ -46,6 +44,13 @@ APIC# moquery -c faultInst -f 'fault.Inst.code=="Fxxxx"'
 APIC# show epg <>
 APIC# show epg <> detail
 APIC# show endpoints ip 10.0.0.1
+```
+### Contracts / Zoning-rules
+```
+LEAF# show zoning-rule
+LEAF# show zoning-filter
+LEAF# show zoning-rule scope <vrf segment>
+LEAF# show zoning-rule | egrep <EPG pcTAG>
 ```
 ### Interfaces
 ```
