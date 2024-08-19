@@ -33,6 +33,14 @@ APIC# moquery -d uni/infra/accportprof-Leaf_101_102/hports-e1-20-typ-range
 APIC# moquery -c fvAEPg -f 'fv.AEPg.name=="App_EPG"'
 APIC# fabric 101 show hostname
 ```
+### Basic Commands
+```
+APIC# show version
+APIC# show controller
+APIC# show switch
+APIC# acidiag fnvread
+APIC# moquery -c faultInst -f 'fault.Inst.code=="Fxxxx"'
+```
 ### Endpoint learning
 ```
 APIC# show epg <>
@@ -75,12 +83,14 @@ APIC# acidiag cluster
 ```
 ### Faults, Logging
 ```
+APIC# moquery -c faultInst -f 'fault.Inst.code=="Fxxxx"'
 APIC# show faults last-days 5 history
 APIC# show faults leaf 101
 APIC# show faults history leaf 101
 ```
 ### APIC Cluster
 ```
+APIC# show controller
 APIC# acidiag avread
 APIC# avread
 ```
