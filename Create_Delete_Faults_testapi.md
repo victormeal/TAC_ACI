@@ -122,6 +122,17 @@ userdom          : all
 https://techzone.cisco.com/t5/Application-Centric/Using-icurl-to-TestAPI-Delete-an-Object-in-ACI/ta-p/1250057
 
 Same steps as create one, but change the status tu deleted...
+```
+1. APIC# acidiag dbgtoken
+2. Password on http://git.insieme.local/cgi-bin/generateRootPassword.py
+3. APIC# ssh root@localhost
+4. APIC# enable_testapi.bin 3600
+5. exit
+7. APIC# moquery -c faultInst -f 'fault.Inst.code=="F1651"'
+6. APIC# icurl -g -X POST 'http://localhost:7777/testapi/mo/expcont/expstatus-tsod-MY_TEST/fault-F1651.xml' -d '<faultInst code="F1651" severity="minor" status="deleted"/>'
+
+from above change "expcont/expstatus-tsod-MY_TEST/fault-F1651" with the correct dn obtained on step 7.
+```
 
 ```
 MXS2-AP001# icurl -g -X POST 'http://localhost:7777/testapi/mo/expcont/expstatus-tsod-MY_TEST/fault-F1651.xml' -d '<faultInst code="F1651" severity="minor" status="deleted"/>'
