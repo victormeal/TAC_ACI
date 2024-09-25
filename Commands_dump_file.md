@@ -130,3 +130,11 @@ BLF# show bgp ipv4 unicast neighbors 3.3.3.3 advertised-routes vrf vmenchac_T01:
 BLF# show bgp ipv4 unicast neighbors 3.3.3.3 routes vrf vmenchac_T01:vmenchac_vrf_01
 BLF# show bgp ipv4 unicast neighbors 3.3.3.3 received-routes vrf vmenchac_T01:vmenchac_vrf_01
 ```
+### DHCP Relay
+```
+LEAF# show ip dhcp relay
+LEAF# show vlan id 32 extended
+LEAF# show dhcp internal info relay address interface vlan 32
+LEAF# show dhcp internal info relay discover
+LEAF# show dhcp internal event-history traces | egrep -i "udp|DHCP|smac|Dmac|ctx|pkt|interface|svi|drop|type"
+```
