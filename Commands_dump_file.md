@@ -49,6 +49,7 @@ APIC# show endpoints ip 10.0.0.1
 ### Contracts / Zoning-rules
 ```
 APIC# moquery -c fvCtx -f 'fv.Ctx.name=="Presales_VRF"'
+APIC# moquery -c fvAEPg -f 'fv.AEPg.name=="App_EPG"'
 ```
 ```
 LEAF# show zoning-rule
