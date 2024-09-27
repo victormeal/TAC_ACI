@@ -49,9 +49,11 @@ APIC# show endpoints ip 10.0.0.1
 ### Contracts / Zoning-rules
 ```
 LEAF# show zoning-rule
-LEAF# show zoning-filter
 LEAF# show zoning-rule scope <vrf segment>
 LEAF# show zoning-rule | egrep <EPG pcTAG>
+LEAF# show zoning-filter
+LEAF# show zoning-filter filter 8
+
 ```
 ### Interfaces
 ```
