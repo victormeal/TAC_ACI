@@ -39,6 +39,7 @@ APIC# show controller
 APIC# show switch
 APIC# acidiag fnvread
 APIC# moquery -c faultInst -f 'fault.Inst.code=="Fxxxx"'
+APIC# show fault code Fxxxx detail
 ```
 ### Endpoint learning
 ```
@@ -142,4 +143,9 @@ LEAF# show vlan id 32 extended
 LEAF# show dhcp internal info relay address interface vlan 32
 LEAF# show dhcp internal info relay discover
 LEAF# show dhcp internal event-history traces | egrep -i "udp|DHCP|smac|Dmac|ctx|pkt|interface|svi|drop|type"
+```
+
+### QOS
+```
+LEAF# show system internal qos vlan encap 2000
 ```
