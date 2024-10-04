@@ -137,6 +137,12 @@ BLF# show bgp ipv4 unicast neighbors 3.3.3.3 advertised-routes vrf vmenchac_T01:
 BLF# show bgp ipv4 unicast neighbors 3.3.3.3 routes vrf vmenchac_T01:vmenchac_vrf_01
 BLF# show bgp ipv4 unicast neighbors 3.3.3.3 received-routes vrf vmenchac_T01:vmenchac_vrf_01
 ```
+### Multicast L3
+```
+SPINE# show isis internal mcast routes gipo | egrep 255.1.192.9 -A10
+SPINE# show isis internal mcast routes ftag
+LEAF# show ip mroute <mgroup> vrf <vrf_name>
+```
 ### DHCP Relay
 ```
 LEAF# show ip dhcp relay
