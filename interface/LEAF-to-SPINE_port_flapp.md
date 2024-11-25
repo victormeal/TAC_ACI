@@ -734,3 +734,230 @@
 
 MXS2-LF104#
 ```
+
+
+MXS2-LF104# show system internal ethpm event-history int e1/51 | egrep "FSM:<" -A4
+```
+349) FSM:<Ethernet1/51> Transition at 2024-11-22T15:53:30.775640000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGUP_DONE]
+    Next state: [FSM_ST_NO_CHANGE]
+```
+```
+350) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.808294000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_LINK_DOWN]
+    Next state: [FSM_ST_NO_CHANGE]
+
+--
+355) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.813154000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_LOGICAL_DOWN]
+    Next state: [ETH_PORT_FSM_ST_WAIT_LOGICAL_DOWN]
+
+356) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.813201000-06:00
+    Previous state: [ETH_PORT_FSM_ST_WAIT_LOGICAL_DOWN]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGDOWN_CMD]
+    Next state: [FSM_ST_NO_CHANGE]
+
+357) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.813215000-06:00
+    Previous state: [ETH_PORT_FSM_ST_WAIT_LOGICAL_DOWN]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGDOWN]
+    Next state: [FSM_ST_NO_CHANGE]
+
+--
+365) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.827910000-06:00
+    Previous state: [ETH_PORT_FSM_ST_WAIT_LOGICAL_DOWN]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGDOWN_DONE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+366) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.827930000-06:00
+    Previous state: [ETH_PORT_FSM_ST_WAIT_LOGICAL_DOWN]
+    Triggered event: [ETH_PORT_FSM_EV_LOGICAL_DOWN_DONE]
+    Next state: [ETH_PORT_FSM_ST_WAIT_PROTOCOL_DOWN]
+
+--
+372) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.831399000-06:00
+    Previous state: [ETH_PORT_FSM_ST_WAIT_PROTOCOL_DOWN]
+    Triggered event: [ETH_PORT_FSM_EV_PROTO_DOWN_DONE]
+    Next state: [ETH_PORT_FSM_ST_PROTOCOL_DOWN]
+
+373) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.831405000-06:00
+    Previous state: [ETH_PORT_FSM_ST_PROTOCOL_DOWN]
+    Triggered event: [ETH_PORT_FSM_EV_PHY_DOWN]
+    Next state: [ETH_PORT_FSM_ST_WAIT_PHYSICAL_DOWN]
+
+--
+391) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.863811000-06:00
+    Previous state: [ETH_PORT_FSM_ST_WAIT_PHYSICAL_DOWN]
+    Triggered event: [ETH_PORT_FSM_EV_PHY_DOWN_DONE]
+    Next state: [ETH_PORT_FSM_ST_WAIT_APPLY_CONFIG]
+
+--
+402) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.864064000-06:00
+    Previous state: [ETH_PORT_FSM_ST_WAIT_APPLY_CONFIG]
+    Triggered event: [ETH_PORT_FSM_EV_CFG_DONE]
+    Next state: [ETH_PORT_FSM_ST_INIT_EVAL]
+
+403) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.864486000-06:00
+    Previous state: [ETH_PORT_FSM_ST_INIT_EVAL]
+    Triggered event: [ETH_PORT_FSM_EV_IE_PORT_INIT]
+    Next state: [ETH_PORT_FSM_ST_SPAN_EVAL]
+
+404) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.864490000-06:00
+    Previous state: [ETH_PORT_FSM_ST_SPAN_EVAL]
+    Triggered event: [ETH_PORT_FSM_EV_NON_SPAN_DEST]
+    Next state: [ETH_PORT_FSM_ST_WAIT_PRE_CFG]
+
+--
+418) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.943522000-06:00
+    Previous state: [ETH_PORT_FSM_ST_WAIT_PRE_CFG]
+    Triggered event: [ETH_PORT_FSM_EV_PRE_CFG_DONE]
+    Next state: [ETH_PORT_FSM_ST_LINK_INIT]
+
+419) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.946215000-06:00
+    Previous state: [ETH_PORT_FSM_ST_LINK_INIT]
+    Triggered event: [ETH_PORT_FSM_EV_SI_CONFIG_CMD]
+    Next state: [FSM_ST_NO_CHANGE]
+
+420) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.946258000-06:00
+    Previous state: [ETH_PORT_FSM_ST_LINK_INIT]
+    Triggered event: [ETH_PORT_FSM_EV_SI_DELETE_CMD]
+    Next state: [FSM_ST_NO_CHANGE]
+
+421) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.946271000-06:00
+    Previous state: [ETH_PORT_FSM_ST_LINK_INIT]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGDOWN]
+    Next state: [FSM_ST_NO_CHANGE]
+
+422) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.946286000-06:00
+    Previous state: [ETH_PORT_FSM_ST_LINK_INIT]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGDOWN_DONE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+423) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:06.946302000-06:00
+    Previous state: [ETH_PORT_FSM_ST_LINK_INIT]
+    Triggered event: [ETH_PORT_FSM_EV_SI_REMOVE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+--
+434) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:07.207733000-06:00
+    Previous state: [ETH_PORT_FSM_ST_LINK_INIT]
+    Triggered event: [ETH_PORT_FSM_EV_SI_REMOVE_DONE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+435) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:07.207746000-06:00
+    Previous state: [ETH_PORT_FSM_ST_LINK_INIT]
+    Triggered event: [ETH_PORT_FSM_EV_SI_DELETE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+--
+445) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:07.217073000-06:00
+    Previous state: [ETH_PORT_FSM_ST_LINK_INIT]
+    Triggered event: [ETH_PORT_FSM_EV_SI_DELETE_DONE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+446) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:07.217510000-06:00
+    Previous state: [ETH_PORT_FSM_ST_LINK_INIT]
+    Triggered event: [ETH_PORT_FSM_EV_SI_REINIT_REQ]
+    Next state: [FSM_ST_NO_CHANGE]
+
+447) FSM:<Ethernet1/51> Transition at 2024-11-25T17:32:07.937486000-06:00
+    Previous state: [ETH_PORT_FSM_ST_LINK_INIT]
+    Triggered event: [ETH_PORT_FSM_EV_PACER_TIMER_EXPIRED]
+    Next state: [FSM_ST_NO_CHANGE]
+```
+```
+448) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:12.566466000-06:00
+    Previous state: [ETH_PORT_FSM_ST_LINK_INIT]
+    Triggered event: [ETH_PORT_FSM_EV_LINK_UP]
+    Next state: [ETH_PORT_FSM_ST_WAIT_BRINGUP]
+
+--
+459) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:12.579839000-06:00
+    Previous state: [ETH_PORT_FSM_ST_WAIT_BRINGUP]
+    Triggered event: [ETH_PORT_FSM_EV_BRINGUP_DONE]
+    Next state: [ETH_PORT_FSM_ST_WAIT_PRE_LOGICAL_UP]
+
+--
+463) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:12.583370000-06:00
+    Previous state: [ETH_PORT_FSM_ST_WAIT_PRE_LOGICAL_UP]
+    Triggered event: [ETH_PORT_FSM_EV_PRE_LOGICAL_DONE]
+    Next state: [ETH_PORT_FSM_ST_WAIT_LOGICAL_UP]
+
+464) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:12.583378000-06:00
+    Previous state: [ETH_PORT_FSM_ST_WAIT_LOGICAL_UP]
+    Triggered event: [ETH_PORT_FSM_EV_L3_UP]
+    Next state: [ETH_PORT_FSM_ST_L3_UP]
+
+465) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:12.587206000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_DONE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+466) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.115435000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_CONFIG_CMD]
+    Next state: [FSM_ST_NO_CHANGE]
+
+467) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.115637000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_CREATE_CMD]
+    Next state: [FSM_ST_NO_CHANGE]
+
+468) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.115648000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_CREATE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+--
+483) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.145553000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_CREATE_DONE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+484) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.145570000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGUP]
+    Next state: [FSM_ST_NO_CHANGE]
+
+--
+491) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.162065000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGUP_DONE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+492) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.162313000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_REINIT_REQ]
+    Next state: [FSM_ST_NO_CHANGE]
+
+493) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.162337000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_REINIT_CMD]
+    Next state: [FSM_ST_NO_CHANGE]
+
+494) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.162348000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGDOWN]
+    Next state: [FSM_ST_NO_CHANGE]
+
+--
+504) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.382667000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGDOWN_DONE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+505) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.382686000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGUP]
+    Next state: [FSM_ST_NO_CHANGE]
+
+--
+512) FSM:<Ethernet1/51> Transition at 2024-11-25T17:34:13.400350000-06:00
+    Previous state: [ETH_PORT_FSM_ST_L3_UP]
+    Triggered event: [ETH_PORT_FSM_EV_SI_BRINGUP_DONE]
+    Next state: [FSM_ST_NO_CHANGE]
+
+MXS2-LF104# 
+```
