@@ -32,6 +32,7 @@ APIC# show switch
 APIC# moquery -d uni/infra/accportprof-Leaf_101_102/hports-e1-20-typ-range
 APIC# moquery -c fvAEPg -f 'fv.AEPg.name=="App_EPG"'
 APIC# fabric 101 show hostname
+APIC# moquery -c ipv4.Addr -f 'ipv4.Addr.addr == "10.2.184.66"'
 ```
 ### Basic Commands
 ```
