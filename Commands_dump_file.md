@@ -88,6 +88,7 @@ APIC# moquery -c fabric.ExplicitGEp
 ### VPC
 ```
 LEAF# show system internal epm vpc
+moquery -c vpcDom
 ```
 ### Fabric Discovery
 ```
