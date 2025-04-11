@@ -7,6 +7,11 @@ tcpdump -i kpm_inb host 3.3.3.3 -nn
 tcpdump -ni kpm_inb icmp
 tcpdump -i kpm_inb host 3.3.3.3 and host 1.1.1.1
 ```
+To save in a PCAP file
+```
+MXS2-LF101# tcpdump -i kpm_inb -w /data/techsupport/test.pcap
+tcpdump: listening on kpm_inb, link-type EN10MB (Ethernet), capture size 262144 bytes 
+```
 ```
 MXS2-LF104#  tcpdump -ni kpm_inb icmp
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
