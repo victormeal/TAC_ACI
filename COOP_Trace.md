@@ -1,4 +1,4 @@
-SPINE COOP TRACE
+# SPINE COOP TRACE
 
 ```
 MXS2-L101# show system internal epm endpoint ip 192.168.1.2
@@ -109,4 +109,22 @@ MXS2-S1001# log_trace_bl_print_tool coop_trace.bl | grep eptype.*192.168.1.2
 MXS2-S1001# acidiag fnvread | grep 10.2.160.66
      101        1            MXS2-L101      FDO204520TY     10.2.160.66/32    leaf         active   0
 MXS2-S1001# 
+```
+### TECH Support
+```
+vmenchac@aci-logviewer2:~/.../tmp_logs$ pwd
+/users/vmenchac/dnld_699116351/node-201/decode/dbgexp_tsod-699116351_FBN-DR-SPINE-01_sysid-201_2025-05-17T20-52WAT_logs_3of3/var/sysmgr/tmp_logs
+vmenchac@aci-logviewer2:~/.../tmp_logs$ nxos-bl-decode -f coop_trace.bl | grep 10.2.102.180
+[2025 May 17 15:59:22.604739238:coop_l2rib_export_mac_ipv4_route:2305] TID 28:[DBG_COOP_TRACE_DETAIL_L2RIB]:L2R export DELETE IPv4:10.2.102.180, seq no: 0 Anycast Route FLAG: FALSE<bd_vnid=14876648;mac=00:50:56:83:FF:7F>;
+[2025 May 17 15:59:22.605853423:coop_program_synthip:2691] TID 28:[DBG_COOP_TRACE_DETAIL_UC]:log_collect_coop optype=DELETE;eptype=ip;                ip=10.2.102.180;                 nh=10.252.152.67;flags=0x27;<bd_vnid=14876648;mac=00:50:56:83:FF:7F>;
+[2025 May 17 15:59:22.723664994:coop_ipv4_update_add_leaf:4536] TID 30:[DBG_COOP_TRACE_DETAIL_UC]:Processing add leaf 10.2.102.180 is_anycast 0
+[2025 May 17 15:59:22.723699338:coop_l2rib_export_mac_ipv4_route:2305] TID 30:[DBG_COOP_TRACE_DETAIL_L2RIB]:L2R export UPDATE IPv4:10.2.102.180, seq no: 0 Anycast Route FLAG: FALSE<bd_vnid=14876648;mac=00:50:56:83:FF:7F>;
+[2025 May 17 15:59:22.723757265:coop_program_synthip:2691] TID 30:[DBG_COOP_TRACE_DETAIL_UC]:log_collect_coop optype=ADD;eptype=ip;                ip=10.2.102.180;                 nh=10.252.152.67;flags=0x20;<bd_vnid=14876648;mac=00:50:56:83:FF:7F>;
+[2025 May 17 15:59:22.723940399:coop_ipv4_update_add_leaf:4536] TID 23:[DBG_COOP_TRACE_DETAIL_UC]:Processing add leaf 10.2.102.180 is_anycast 0
+[2025 May 17 15:59:22.723970413:coop_program_synthip:2691] TID 23:[DBG_COOP_TRACE_DETAIL_UC]:log_collect_coop optype=ADD;eptype=ip;                ip=10.2.102.180;                 nh=10.252.152.67;flags=0x25;<bd_vnid=14876648;mac=00:50:56:83:FF:7F>;
+[2025 May 17 15:59:22.724330374:coop_lazy_obj_debug_print:11833] TID 02:[DBG_COOP_TRACE_DETAIL]:    addChunk SUCCEEDED: chunkId=592 priKey {classId=a18, key=d8b6b5} dn=sys/coop/inst/dom-overlay-1/db-ep/epr-14876648-epr-00:50:56:83:FF:7F/epip4-10.2.102.180
+[2025 May 17 15:59:22.728894743:coop_lazy_obj_debug_print:11833] TID 02:[DBG_COOP_TRACE_DETAIL]:    modChunk with DN SUCCEEDED: chunkId=592 priKey {classId=a18, key=d8b6b5} dn=sys/coop/inst/dom-overlay-1/db-ep/epr-14876648-epr-00:50:56:83:FF:7F/epip4-10.2.102.180
+[2025 May 17 15:59:28.581447210:coop_l2rib_export_mac_ipv4_route:2305] TID 16:[DBG_COOP_TRACE_DETAIL_L2RIB]:L2R export DELETE IPv4:10.2.102.180, seq no: 0 Anycast Route FLAG: FALSE<bd_vnid=14876648;mac=00:50:56:83:FF:7F>;
+[2025 May 17 15:59:28.581493459:coop_program_synthip:2691] TID 16:[DBG_COOP_TRACE_DETAIL_UC]:log_collect_coop optype=DELETE;eptype=ip;                ip=10.2.102.180;                 nh=10.252.152.67;flags=0x27;<bd_vnid=14876648;mac=00:50:56:83:FF:7F>;
+[2025 May 17 15:59:28.661576225:coop_program_synthip:2691] TID 22:[DBG_COOP_TRACE_DETAIL_UC]:log_collect_coop optype=DELETE;eptype=ip;                ip=10.2.102.180;                 nh=0.0.0.0;flags=0x22;<bd_vnid=14876648;mac=00:50:56:83:FF:7F>;
 ```
