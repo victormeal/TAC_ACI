@@ -15,6 +15,7 @@ LEAF# show endpoint ip 10.0.0.1
 LEAF# show system internal epm endpoint ip 10.0.0.1
 LEAF# cat /mit/sys/phys-[eth1--51]/summary
 LEAF# show isis dteps vrf overlay-1
+LEAF# MXS2-L103# show mcp internal info vlan 2042 << encap-vlan
 ```
 ```
 SPINE# show coop internal info repo ep | egrep -A 8 -B 42 10.0.0.1
