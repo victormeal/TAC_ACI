@@ -160,3 +160,11 @@ LEAF# show dhcp internal event-history traces | egrep -i "udp|DHCP|smac|Dmac|ctx
 ```
 LEAF# show system internal qos vlan encap 2000
 ```
+### Nexus Dashboard CLI
+```
+ND# acs health
+ND# acs show nodes
+ND# ping -I bond0 10.228.51.90    << mgmt interface
+ND# kubectl get pods -A -o wide | grep mongodb
+ND# acs debug-token
+```
