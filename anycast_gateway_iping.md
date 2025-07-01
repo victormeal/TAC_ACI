@@ -1,5 +1,7 @@
 # Anycast Gateway iping
 
+https://community.cisco.com/t5/application-centric-infrastructure/how-does-aci-iping-work-when-i-use-pervasive-gateway-as-source/td-p/4741758
+
 ```
 MXS2-L103# acidiag fnvread | egrep "101|103"
      101        1            MXS2-L101      FDO204520TY     10.2.160.66/32    leaf         active   0
@@ -7,11 +9,9 @@ MXS2-L103# acidiag fnvread | egrep "101|103"
 MXS2-L103# 
 ```
 
-LEAF 103 TEP 10.2.160.67
-to hex 0A.02.A0.43
+LEAF 103 TEP 10.2.160.67 to hex 0A.02.A0.43
 
-LEAF 101 TEP 10.2.160.66
-to hex 0A.02.A0.42
+LEAF 101 TEP 10.2.160.66 to hex 0A.02.A0.42
 
 ```
 MXS2-L103# show system internal epm endpoint ip 10.12.62.5
