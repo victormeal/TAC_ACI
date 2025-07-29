@@ -126,6 +126,10 @@ APIC# htpstat
 ```
 SWITCH# show bgp sessions vrf overlay-1
 ```
+### L3out
+```
+Border-Leaf# show system internal policy-mgr prefix
+```
 ### OSPF L3Out
 ```
 BLF# show ip ospf interface vrf vmenchac_T01:vmenchac_vrf_01
