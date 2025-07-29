@@ -128,6 +128,9 @@ SWITCH# show bgp sessions vrf overlay-1
 ```
 ### L3out
 ```
+APIC# moquery -c l3extSubnet
+Border-leaf# show zoning-prefixes scope 2392065
+vsh
 Border-Leaf# show system internal policy-mgr prefix
 ```
 ### OSPF L3Out
