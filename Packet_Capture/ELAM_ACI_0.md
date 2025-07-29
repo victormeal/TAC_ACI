@@ -510,4 +510,18 @@ IfId     Ifname      P Cfg  MbrID As AP  Sl Sp Ss Ovec S | P P P S P Sp Sp C M L
 1a034000 Eth1/53     0 2    17    0  5d  1  14 28 128  1   0 0 0 0 0 0  0  0 0 0   1 5   3   2  2  D-24d  -      200  0      0 0   5    0 0   
 module-1(DBG-elam-insel6)# 
 ```
+### ICMP request/reply
 
+ICMP echo Request 
+```
+module-1(DBG-elam-insel6)# ereport | egrep nd.code
+    hea_pr_lu_vec_l4v.nd.code: 0x8
+      hea_pr_lu_vec.l4vec1.nd.code: 0x0
+      hea_pr_lu_vec.l4vec0.nd.code: 0x8
+module-1(DBG-elam-insel6)#   
+```
+ICMP echo reply
+```
+module-1(DBG-elam-insel6)# report | grep nd.code
+sug_pr_lu_vec_l4v.nd.code: 0x0
+module-1(DBG-elam-insel6)# 
