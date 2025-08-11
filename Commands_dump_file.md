@@ -149,6 +149,7 @@ BLF# show ip bgp summary vrf vmenchac_T01:vmenchac_vrf_01
 BLF# show bgp ipv4 unicast neighbors 3.3.3.3 advertised-routes vrf vmenchac_T01:vmenchac_vrf_01
 BLF# show bgp ipv4 unicast neighbors 3.3.3.3 routes vrf vmenchac_T01:vmenchac_vrf_01
 BLF# show bgp ipv4 unicast neighbors 3.3.3.3 received-routes vrf vmenchac_T01:vmenchac_vrf_01
+BLF# show bgp internal event-history logs | egrep 10.250.3.226
 ```
 ### Multicast L3
 ```
