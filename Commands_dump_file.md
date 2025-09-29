@@ -21,6 +21,7 @@ LEAF# MXS2-L103# show mcp internal info vlan 2042 << encap-vlan
 ```
 SPINE# show coop internal info repo ep | egrep -A 8 -B 42 10.0.0.1
 SPINE# show coop internal info repo ep key <BD VNID> <MAC> | egrep 'vnid|mac|id|Real'
+SPINE# show dcimgr repo sclass-maps
 ```
 ```
 APIC# ifconfig
