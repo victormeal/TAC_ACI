@@ -38,6 +38,7 @@ APIC# fabric 101 show hostname
 APIC# moquery -c ipv4.Addr -f 'ipv4.Addr.addr == "10.2.184.66"'
 APIC# show stats granularity 15min history leaf 316 interface eth 1/20
 APIC# acidiag run lldptool out eth2-2
+APIC# cat /var/log/external/messages
 ```
 ### Basic Commands
 ```
