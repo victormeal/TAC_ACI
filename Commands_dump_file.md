@@ -172,6 +172,20 @@ LEAF# show dhcp internal event-history traces | egrep -i "udp|DHCP|smac|Dmac|ctx
 ```
 LEAF# show system internal qos vlan encap 2000
 ```
+### CRASH
+```
+APIC# show cores
+```
+```
+SWITCH# show cores
+SWITCH# show cores history
+SWITCH# show system reset-reason
+SWITCH# show system uptime
+SWITCH# show logging onboard internal reset-reason
+SWITCH# show logging onboard stack-trace 
+SWITCH# show logging onboard card-boot-history
+```
+
 ### Nexus Dashboard CLI
 ```
 ND# acs health
