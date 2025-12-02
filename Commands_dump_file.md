@@ -185,6 +185,15 @@ SWITCH# show logging onboard internal reset-reason
 SWITCH# show logging onboard stack-trace 
 SWITCH# show logging onboard card-boot-history
 ```
+### Cluster issues
+```
+APIC# cat /data/data_admin/sam_exported.config  << initial setup-config
+APIC# acidiag cluster  << script of checks
+APIC# avread <<< cluster info
+APIC# show controller
+APIC# acidiag run lldptool in eth2-1
+LEAF# moquery -c lldpIf -f 'lldp.If.wiringIssues!=""'
+```
 
 ### Nexus Dashboard CLI
 ```
