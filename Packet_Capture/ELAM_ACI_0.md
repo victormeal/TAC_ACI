@@ -524,4 +524,24 @@ ICMP echo reply
 ```
 module-1(DBG-elam-insel6)# report | grep nd.code
 sug_pr_lu_vec_l4v.nd.code: 0x0
-module-1(DBG-elam-insel6)# 
+module-1(DBG-elam-insel6)#
+```
+### ASIC Type
+```
+MXS2-L101# vsh_lc -c "show platform internal hal objects platform asic"
+## Get Objects for platform asic for Asic 0
+
+  OBJECT 0: 
+Handle                                                    : 18 
+asictype                                                  : sugarbowl 
+asicinst                                                  : 0x0 
+asicpcibus                                                : 0xff 
+family                                                    : tahoe 
+numslices                                                 : 0x2 
+isinitdone                                                : 0x0 
+numasicports                                              : 0x50 
+slotnum                                                   : 0x0 
+
+MXS2-L101# 
+```
+https://techzone.cisco.com/t5/Application-Centric/ACI-Elam-Hardware-Cheatsheet/ta-p/1396268
