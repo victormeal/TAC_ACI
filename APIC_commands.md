@@ -12,3 +12,7 @@ apicbash# show lldptool out eth2-2
 ```
 apic# cat /proc/net/bonding/bond0
 ```
+```
+apic# show discoveryissues
+leaf# show discoveryissues
+```
