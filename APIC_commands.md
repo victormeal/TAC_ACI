@@ -6,6 +6,9 @@ apic# acidiag run lldptool out eth2-1
 ```
 ```
 apic# bash
-apic:~> show lldptool in eth2-1
-apic:~> show lldptool out eth2-2
+apicbash# show lldptool in eth2-1
+apicbash# show lldptool out eth2-2
+```
+```
+apic# cat /proc/net/bonding/bond0
 ```
