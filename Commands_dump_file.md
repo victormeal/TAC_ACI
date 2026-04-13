@@ -177,14 +177,24 @@ LEAF# show system internal qos vlan encap 2000
 APIC# show cores
 ```
 ```
-SWITCH# show cores
-SWITCH# show cores history
+SWITCH# show module
+SWITCH# show version
+SWITCH# show inventory
 SWITCH# show system reset-reason
 SWITCH# show system uptime
+SWITCH# show cores
+SWITCH# show cores history
+SWITCH# df-h
+
+SWITCH# vsh <<< need to run this first for the following commands
 SWITCH# show logging onboard internal reset-reason
-SWITCH# show logging onboard stack-trace 
+SWITCH# show logging onboard stack-trace
 SWITCH# show logging onboard card-boot-history
+SWITCH# show processes log
+SWITCH# show system internal kernel messages
 ```
+
+
 ### Cluster issues
 ```
 APIC# cat /data/data_admin/sam_exported.config  << initial setup-config
